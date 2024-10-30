@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Tracks | Mangaldan National High School</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+    <style>
+      /* Base Styling */       
+      @keyframes gradientAnimation {
+            0% {
+              background-position: 0% 50%;
+          }
+          50% {
+              background-position: 100% 50%;
+          }
+          100% {
+              background-position: 0% 50%;
+          }
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #e9ecef;
+        background: linear-gradient(270deg, #1b1f21, #2c3e50, #1b1f21); /* Gradient background */
+        background-size: 400% 400%; /* Increase the size for smoother animation */
+        animation: gradientAnimation 15s ease infinite; /* Animation effect */
+        overflow-x: hidden; /* Prevent horizontal scroll */
+      }
+
+      /* Navbar Styling */
+      .navbar {
+        background-color: #2c3e50;
+      }
+
+      .navbar-brand img {
+        width: 50px;
+      }
+
+      .navbar-nav .nav-link {
+        color: #e9ecef !important;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #65c47e !important;
+      }
+
+      /* Page Header Styling */
+      .page-header {
+        background: linear-gradient(to bottom right, rgba(52, 78, 65, 0.8), rgba(58, 90, 64, 0.8)); /* Semi-transparent gradient */
+        color: #e9ecef;
+        text-align: center;
+        padding: 60px 20px;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .page-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      /* Academic Tracks Section */
+      .tracks-section {
+        padding: 40px;
+        max-width: 1200px;
+        margin: 30px auto;
+        background-color: rgba(51, 62, 66, 0.8); /* Semi-transparent background for section */
+        border-radius: 8px; /* Rounded corners */
+      }
+
+      .track-card {
+        background: #333e42;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        transition: transform 0.3s;
+        display: flex; /* Ensure flexbox layout */
+        align-items: center; /* Center vertically */
+        opacity: 0; /* Start hidden */
+        transform: translateY(20px); /* Start from below */
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Smooth transition */
+      }
+
+      .track-card.visible {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Move to original position */
+      }
+
+      .track-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .track-card img {
+        width: 50%; /* Adjust image size */
+        height: auto; /* Maintain aspect ratio */
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+      }
+
+      .track-card h3 {
+        color: #65c47e;
+        font-size: 1.8rem;
+        text-align: center; /* Center the heading */
+        margin: 0; /* Reset margin */
+      }
+
+      .track-card p {
+        padding: 20px;
+        color: #d3d3d3;
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center; /* Center the paragraph */
+        margin: 0; /* Reset margin */
+      }
+
+      /* Footer Styling */
+      footer {
+        background-color: #2c3e50;
+        color: #e9ecef;
+        padding: 20px 0;
+        position: relative;
+        z-index: 1;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+
+      /* Custom styling for alternating layout */
+      .track-card:nth-child(odd) {
+        flex-direction: row; /* Left-aligned */
+      }
+
+      .track-card:nth-child(even) {
+        flex-direction: row-reverse; /* Right-aligned */
+      }
+
+      .track-card .content {
+        width: 50%; /* Text content width */
+        padding: 20px; /* Padding for content */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand" href="#">
+          <img src="images-removebg-preview.jpg" alt="School Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="mainpage.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="academic.html"
+                >Academic Tracks</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="studlife.html">Student Life</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="academic.html">Academic</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1>Academic Tracks</h1>
+      <p>
+        Explore our diverse academic programs designed to prepare students for
+        their future careers through a rich blend of theoretical knowledge and
+        practical skills.
+      </p>
+    </header>
+
+    <!-- Academic Tracks Section -->
+    <section class="tracks-section">
+      <div class="container">
+        <div class="track-card">
+          <img src="images/abm.png" alt="ABM Track" />
+          <div class="content">
+            <h3>Accountancy, Business, and Management (ABM)</h3>
+            <p>
+              The Accountancy, Business, and Management track is meticulously
+              crafted to provide students with a comprehensive understanding of
+              key business principles. This program encompasses essential
+              subjects such as accounting, finance, marketing, and management,
+              equipping students with the necessary knowledge and skills to
+              pursue a successful career in the ever-evolving business
+              landscape. Students in this track will explore various facets of
+              entrepreneurship, making it an ideal choice for those aspiring to
+              establish their own ventures or to excel in corporate
+              environments.
+            </p>
+          </div>
+        </div>
+        <div class="track-card">
+          <img src="images/stem.png" alt="STEM Track" />
+          <div class="content">
+            <h3>Science, Technology, Engineering, and Mathematics (STEM)</h3>
+            <p>
+              The STEM track offers a rigorous curriculum that emphasizes
+              advanced concepts in the fields of science and mathematics.
+              Students in this program will engage deeply with complex theories
+              and hands-on experiments, preparing them for rewarding careers in
+              engineering, technology, and various scientific disciplines. This
+              track is ideal for those who have a passion for problem-solving
+              and innovation, providing a solid foundation for further education
+              in higher learning institutions or direct entry into the workforce
+              in high-demand fields.
+            </p>
+          </div>
+        </div>
+        <div class="track-card">
+          <img src="images/hum.png" alt="HUMSS Track" />
+          <div class="content">
+            <h3>Humanities and Social Sciences (HUMSS)</h3>
+            <p>
+              The Humanities and Social Sciences track centers around subjects
+              that delve into human behavior, society, and culture. This program
+              encompasses a variety of disciplines including literature,
+              sociology, and psychology, making it an excellent choice for
+              students interested in understanding the complexities of the human
+              experience. Those pursuing this track will be well-prepared for
+              careers in fields such as education, law, psychology, social work,
+              and communication, where they can apply their knowledge to make a
+              meaningful impact in their communities.
+            </p>
+          </div>
+        </div>
+        <div class="track-card">
+          <img src="images/tvl.png" alt="TVL Track" />
+          <div class="content">
+            <h3>Technical-Vocational-Livelihood (TVL)</h3>
+            <p>
+              The Technical-Vocational-Livelihood track is designed to provide
+              students with practical skills and training tailored for various
+              vocational careers. This program emphasizes hands-on experiences
+              and real-world applications, ensuring that students are job-ready
+              upon graduation. Participants will have the opportunity to explore
+              multiple fields, acquiring valuable competencies that can lead to
+              immediate employment or further educational pursuits in technical
+              disciplines. This track is perfect for those looking to gain
+              specific vocational skills while still in high school.
+            </p>
+          </div>
+        </div>
+        <div class="track-card">
+          <img src="/images/ict.png" alt="ICT" />
+          <div class="content">
+            <h3>Information and Communications Technology (ICT)</h3>
+            <p>
+              The Information and Communications Technology track prepares
+              students for dynamic careers in computing, programming, and
+              digital media. This program focuses on developing practical skills
+              in various technological areas, including software development,
+              network management, and multimedia production. Students will learn
+              to navigate the digital landscape effectively, preparing them for
+              high-demand roles in a technology-driven world. This track is
+              ideal for those who have a strong interest in technology and want
+              to harness its potential for innovation and problem-solving.
+            </p>
+          </div>
+        </div>
+        <div class="track-card">
+          <img src="images/smaw.png" alt="SMAW" />
+          <div class="content">
+            <h3>SMAW (Shielded Metal Arc Welding)</h3>
+            <p>
+              The SMAW (Shielded Metal Arc Welding) program focuses on
+              developing essential skills in various welding techniques,
+              particularly using electric arcs to join metals. This hands-on
+              training emphasizes safety practices, precision, and the ability
+              to work with a variety of materials in multiple positions.
+              Students will gain practical experience that prepares them for
+              immediate employment in the manufacturing and construction
+              sectors, where skilled welders are in high demand. This track is
+              ideal for individuals looking to pursue a career in the skilled
+              trades.
+            </p>
+          </div>
+        </div>
+        <div class="track-card">
+          <img src="images/cook.png" alt="Cookery" />
+          <div class="content">
+            <h3>Cookery</h3>
+            <p>
+              The Cookery program offers a comprehensive exploration of culinary
+              arts, including the preparation, cooking, and presentation of a
+              diverse array of dishes. Students will learn essential cooking
+              techniques, ingredient selection, and nutritional considerations,
+              enabling them to create flavorful and health-conscious meals. This
+              track not only cultivates practical cooking skills but also
+              nurtures creativity in the kitchen, preparing students for careers
+              in hospitality, catering, and other culinary fields. It is perfect
+              for aspiring chefs and culinary enthusiasts alike.
+            </p>
+          </div>
+        </div>
+        <div class="track-card">
+          <img src="images/iem1.png" alt="IEM" />
+          <div class="content">
+            <h3>IEM (Industrial Engineering and Management)</h3>
+            <p>
+              The Industrial Engineering and Management track equips students
+              with vital skills needed to optimize processes and enhance
+              efficiency across various industries. This comprehensive program
+              covers essential topics such as production management, systems
+              design, quality control, and operational research, preparing
+              students for diverse roles in engineering and business management.
+              Graduates will be well-prepared to tackle challenges in modern
+              workplaces, making this track ideal for those who aspire to lead
+              and innovate in their future careers.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="track-card">
+        <img src="images/program.png" alt="PROGRAMS" />
+        <div class="content">
+          <h3>Junior High School Programs</h3>
+        </div>
+      </div>
+      <div class="track-card">
+        <img src="images/ssc.png" alt="SSC Track" />
+        <div class="content">
+          <h3>Special Science Class (SSC)</h3>
+          <p>
+            The Special Science Class (SSC) is a unique program tailored for
+            students with a strong interest in science and mathematics. This
+            track offers an advanced curriculum, focusing on subjects like
+            biology, chemistry, and physics, complemented by research projects
+            and laboratory work. It aims to cultivate critical thinking and
+            analytical skills, providing a solid foundation for students
+            aspiring to pursue degrees in scientific fields or medicine.
+          </p>
+        </div>
+      </div>
+
+      <div class="track-card">
+        <img src="images/spj.png" alt="SPJ Track" />
+        <div class="content">
+          <h3>Special Program in Journalism (SPJ)</h3>
+          <p>
+            The Special Program in Journalism (SPJ) is designed for
+            aspiring journalists and communicators. This track provides
+            intensive training in writing, reporting, and multimedia
+            production. Students will engage in real-world projects, honing
+            their storytelling skills while exploring the ethical and
+            professional standards of journalism. This program is ideal for
+            those looking to make a significant impact in the field of media
+            and communication.
+          </p>
+        </div>
+      </div>
+
+      <div class="track-card">
+        <img src="images/spm.png" alt="SPM Track" />
+        <div class="content">
+          <h3>Special Program in Math (SPM)</h3>
+          <p>
+            The Special Program in Math (SPM) is aimed at students who have a
+            keen interest in mathematics and its applications. This track
+            offers a deeper exploration of mathematical concepts and
+            problem-solving techniques, preparing students for careers in
+            fields such as engineering, finance, and data science. The program
+            emphasizes critical thinking and analytical skills, ensuring that
+            graduates are well-equipped for advanced studies or professional
+            challenges in quantitative disciplines.
+          </p>
+        </div>
+      </div>
+
+      <div class="track-card">
+        <img src="images/spa.png" alt="SPA Track" />
+        <div class="content">
+          <h3>Special Program in Arts (SPA)</h3>
+          <p>
+            The Special Program in Arts (SPA) caters to creative students
+            passionate about various art forms, including visual arts,
+            performing arts, and music. This track encourages artistic
+            expression and critical appreciation of the arts through practical
+            and theoretical learning. Students will develop their talents
+            while gaining insight into the cultural significance of the arts,
+            preparing them for careers in creative industries or further
+            studies in the field of arts and design.
+          </p>
+        </div>
+      </div>
+
+      <div class="track-card">
+        <img src="images/spfl.png" alt="SPFL Track" />
+        <div class="content">
+          <h3>Special Program in Foreign Languages (SPFL)</h3>
+          <p>
+            The Special Program in Foreign Languages (SPFL) focuses on
+            language acquisition and cultural understanding. This track offers
+            students the opportunity to learn multiple foreign languages,
+            enhancing their communication skills and global perspective. With
+            a strong emphasis on immersive learning experiences, students will
+            engage with native speakers and explore the cultural contexts of
+            the languages they study, preparing them for careers in
+            international relations, translation, and other global fields.
+          </p>
+        </div>
+      </div>
+
+      <div class="track-card">
+        <img src="images/sps.png" alt="SPS Track" />
+        <div class="content">
+          <h3>Special Program in Sports (SPS)</h3>
+          <p>
+            The Special Program in Sports (SPS) is designed for students
+            interested in athletic training and sports management. This track
+            offers a comprehensive approach to physical education, covering
+            topics such as coaching, sports science, and health education. With
+            a focus on developing leadership skills and teamwork, this program
+            prepares students for careers in sports coaching, physical therapy,
+            and sports administration.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="container">
+        <p>&copy; 2024 Mangaldan National High School. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+    <!-- Scroll Animation Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const trackCards = document.querySelectorAll(".track-card");
+
+        const observerOptions = {
+          root: null, // Use the viewport
+          threshold: 0.1, // Trigger when 10% of the target is visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target); // Stop observing after it becomes visible
+            }
+          });
+        }, observerOptions);
+
+        trackCards.forEach((card) => {
+          observer.observe(card); // Observe each track card
+        });
+      });
+    </script>
+  </body>
+</html>

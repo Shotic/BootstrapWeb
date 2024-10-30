@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mangaldan National High School</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous" />
+  </head>
+  <style>
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: #e9ecef;
+      background: linear-gradient(
+        270deg,
+        #1b1f21,
+        #2c3e50,
+        #1b1f21
+      ); /* Gradient background */
+      background-size: 400% 400%; /* Increase the size for smoother animation */
+      animation: gradientAnimation 15s ease infinite; /* Animation effect */
+      overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #2a2a3d; /* Darker shade */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      animation: fadeInDown 0.8s ease;
+    }
+    .navbar-brand img {
+      width: 50px;
+    }
+    .navbar-nav .nav-link {
+      color: #d0d0e0; /* Light grey for links */
+      font-weight: 500;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #61dafb; /* Light blue on hover */
+    }
+
+    /* Welcome Box */
+    .welcome-box {
+      background-color: #3a3a4a; /* Darker background for contrast */
+      color: #f0f0f0; /* Light text */
+      padding: 40px;
+      margin: 40px auto;
+      text-align: center;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s ease;
+    }
+    .welcome-box h2 {
+      font-size: 2.5rem; /* Increased size */
+      font-weight: 700; /* Bolder font weight */
+      margin-bottom: 20px; /* Added spacing */
+    }
+    .welcome-box p {
+      font-size: 1.5rem; /* Increased font size */
+      color: #bbb; /* Medium grey for paragraph */
+      line-height: 1.5; /* Improved line spacing */
+    }
+
+    /* Carousel Controls */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #61dafb; /* Light blue for icons */
+      border-radius: 50%; /* Make controls round */
+    }
+    .carousel-inner .carousel-item {
+      transition: transform 0.5s ease;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #2a2a3d; /* Same as navbar */
+      padding: 20px 0;
+      border-top: 1px solid #444;
+      text-align: center;
+      animation: fadeInUp 1.2s ease;
+    }
+    .footer-content {
+      color: #ddd; /* Light grey for footer text */
+      font-size: 0.9rem;
+    }
+    .footer-links {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-links li {
+      display: inline;
+      margin: 0 10px;
+    }
+    .footer-links a,
+    .footer-social a {
+      color: #bbb; /* Grey links */
+      text-decoration: none;
+    }
+    .footer-links a:hover,
+    .footer-social a:hover {
+      color: #61dafb; /* Light blue on hover */
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand" href="#">
+          <img src="images-removebg-preview.jpg" alt="School Logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="mainpage.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="studlife.html">Student Life</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="academic.html">Academic</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Welcome Box -->
+    <div class="welcome-box">
+      <h2>Welcome to Mangaldan National High School!</h2>
+      <p>Where learning is not just a duty, but a thrilling adventure!</p>
+      <p>
+        Explore our programs, events, and endless opportunities for growth.
+        Together, we inspire and empower every student to reach their full
+        potential.
+      </p>
+      <p>Thank you for visiting us!</p>
+    </div>
+
+    <!-- Carousel -->
+    <div
+      id="carouselExampleControls"
+      class="carousel slide"
+      data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/Front1.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="images/front2.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="images/front3.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2024 ICT-1. All Rights Reserved.</p>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+  </body>
+</html>
